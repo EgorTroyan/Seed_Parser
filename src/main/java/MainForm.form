@@ -99,18 +99,6 @@
               <text value="DAT (for SAS)"/>
             </properties>
           </component>
-          <component id="d0301" class="javax.swing.JCheckBox" binding="zip">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-              <gridbag weightx="0.0" weighty="0.0"/>
-            </constraints>
-            <properties>
-              <actionCommand value="архив с паролем"/>
-              <inheritsPopupMenu value="false"/>
-              <label value="архив с паролем"/>
-              <text value="архив с паролем"/>
-            </properties>
-          </component>
         </children>
       </grid>
     </children>
