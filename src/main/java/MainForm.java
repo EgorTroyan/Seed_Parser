@@ -12,7 +12,6 @@ public class MainForm
     private JCheckBox DATForSASCheckBox;
     private JButton goButton;
     private JCheckBox eTokenCheckBox;
-    private JCheckBox zip;
 
     public JPanel getMainPanel() {
         return mainPanel;
@@ -21,7 +20,6 @@ public class MainForm
     public MainForm() {
         XMLForSAMCheckBox.setSelected(true);
         DATForSASCheckBox.setSelected(true);
-        zip.setSelected(true);
         eTokenCheckBox.setSelected(false);
         goButton.addActionListener(new Action() {
             @Override
@@ -62,50 +60,17 @@ public class MainForm
                     if (SeedParser.name.isEmpty()){
                         throw new Exception();
                     }
-                    if (DATForSASCheckBox.isSelected()
-                       && XMLForSAMCheckBox.isSelected()
-                       && zip.isSelected()
-                       && !eTokenCheckBox.isSelected())
-                    {
-                        SeedParser.start(Type.ALL, true);
+                    if (DATForSASCheckBox.isSelected() && XMLForSAMCheckBox.isSelected() && !eTokenCheckBox.isSelected()) {
+                        SeedParser.start("3");
                     }
-                    else if (DATForSASCheckBox.isSelected()
-                            && XMLForSAMCheckBox.isSelected()
-                            && !zip.isSelected()
-                            && !eTokenCheckBox.isSelected())
-                    {
-                        SeedParser.start(Type.ALL, false);
+                    else if (DATForSASCheckBox.isSelected() && !XMLForSAMCheckBox.isSelected() && !eTokenCheckBox.isSelected()) {
+                        SeedParser.start("2");
                     }
-                    else if (DATForSASCheckBox.isSelected()
-                            && !XMLForSAMCheckBox.isSelected()
-                            && zip.isSelected()
-                            && !eTokenCheckBox.isSelected())
-                    {
-                        SeedParser.start(Type.DAT,true);
-                    }
-                    else if (DATForSASCheckBox.isSelected()
-                            && !XMLForSAMCheckBox.isSelected()
-                            && !zip.isSelected()
-                            && !eTokenCheckBox.isSelected())
-                    {
-                        SeedParser.start(Type.DAT,false);
-                    }
-                    else if (!DATForSASCheckBox.isSelected()
-                            && XMLForSAMCheckBox.isSelected()
-                            && zip.isSelected()
-                            && !eTokenCheckBox.isSelected())
-                    {
-                        SeedParser.start(Type.XML, true);
-                    }
-                    else if (!DATForSASCheckBox.isSelected()
-                            && XMLForSAMCheckBox.isSelected()
-                            && !zip.isSelected()
-                            && !eTokenCheckBox.isSelected())
-                    {
-                        SeedParser.start(Type.XML, false);
+                    else if (!DATForSASCheckBox.isSelected() && XMLForSAMCheckBox.isSelected() && !eTokenCheckBox.isSelected()) {
+                        SeedParser.start("1");
                     }
                     else if (eTokenCheckBox.isSelected()) {
-                        SeedParser.start(Type.CLEAR5110, true);
+                        SeedParser.start("99");
                     } else {
                         throw new StringIndexOutOfBoundsException();
 
