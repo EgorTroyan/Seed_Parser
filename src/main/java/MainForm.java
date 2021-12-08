@@ -4,6 +4,7 @@ import java.beans.PropertyChangeListener;
 import java.io.IOException;
 
 public class MainForm
+
 {
     private JPanel mainPanel;
     private JTextField textField1;

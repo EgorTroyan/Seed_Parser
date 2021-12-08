@@ -107,8 +107,8 @@
             <properties>
               <actionCommand value="архив с паролем"/>
               <inheritsPopupMenu value="false"/>
-              <label value="архив с паролем"/>
-              <text value="архив с паролем"/>
+              <label value="архив с паролем?"/>
+              <text value="архив с паролем?"/>
             </properties>
           </component>
         </children>

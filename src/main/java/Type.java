@@ -4,5 +4,4 @@ public enum Type {
     ALL,
     CLEAR5110
 
-
 }

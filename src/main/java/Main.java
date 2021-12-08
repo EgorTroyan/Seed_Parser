@@ -4,6 +4,7 @@ public class Main
 {
     public static void main(String[] args)
     {
+
         Thread thread = new Thread(new Repository());
         thread.start();
         JFrame frame = new JFrame();
